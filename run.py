@@ -105,6 +105,8 @@ class annotated_data:
         screen.blit(smallfont.render(f"Label: \"{label}\"", True, BLACK), (10, y)); y += 20
         spans_str = '\", \"'.join(spans)
         screen.blit(smallfont.render(f"Spans: \"{spans_str}\"", True, BLACK), (10, y)); y += 20
+        docid = self.candidates[i]["docid"]
+        screen.blit(smallfont.render(f"docid = {docid}", True, BLACK), (10,y)); y += 20
         screen.blit(smallfont.render(f"n = {len(candidates)}", True, BLACK), (10, y)); y += 20
 
         screen.blit(smallfont.render(f"n_labelled = {n_labelled}", True, BLACK), (10, y))
